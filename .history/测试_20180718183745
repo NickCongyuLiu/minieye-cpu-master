@@ -1,0 +1,659 @@
+MT6763V/V
+DMSWS output.info.v1.process_fps 1497772836220127 14.752371
+DMSWS output.info.v1.process_fps 1497772836285353 14.344262
+
+----Input info----
+timeStamp:1497772837231274
+tzcpu: [tscpu_read]3 trip_0=117000 0 mtktscpu-sysrst trip_1=90000 0 cpu_adaptive_0 trip_2=84000 0 cpu_adaptive_1 trip_3=65000 0 no-cooler trip_4=63000 0 no-cooler trip_5=60000 0 no-cooler trip_6=55000 0 no-cooler trip_7=50000 0 no-cooler trip_8=45000 0 no-cooler trip_9=40000 0 no-cooler interval=200 g 0 700000 575 g 1 530000 331 d 0 0 d 1 0 d 2 0 d 3 0 d 4 0 d 5 0 d 6 0 d 7 0 d 8 0 d 9 0 d 10 0 d 11 0 d 12 0 d 13 0 d 14 0 d 15 0 d 16 0 d 17 0 d 18 0 d 19 0 d 20 0 d 21 0 d 22 0 d 23 0 d 24 0 d 25 0 d 26 0 d 27 0 d 28 0 d 29 0 d 30 0 d 31 0 d 32 0 d 33 0 
+clctm: ctm 2 Target Tj 0 90000 Target Tj 2 85000 Tpcb 1 43000 Tpcb 2 46000 Exit Tj 0 75000 Exit Tj 2 52000 Enter_a 443318 Enter_b 8333 Exit_a 404682 Exit_b 7667 K_TT 4000 MAX_K_SUM_TT 40000 K_SUM_TT_LOW 500 K_SUM_TT_HIGH 500 MIN_SUM_TT -800000 MAX_SUM_TT 800000 MIN_TTJ 65000 CATMP_STEADY_TTJ_DELTA 13500 
+Force Limit core:cluster 0: min_core_num = -1, max_core_num = -1 cluster 1: min_core_num = -1, max_core_num = -1 
+User Limit freq:cluster 0: min_freq_idx = 0, max_freq_idx = -1 cluster 1: min_freq_idx = 0, max_freq_idx = -1 
+
+----Output info----
+timeStamp:1497772837232833
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	82900 
+mtktspa :	-127000 
+mtktspmic :	62478 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	74920 
+mt6356tsbuck2 :	73309 
+mtktscharger :	30000 
+mtktsAP :	63000 
+mtktsbtsmdpa :	60000 
+tzts1 :	77700 
+tzts2 :	83200 
+tzts3 :	71800 
+tzts4 :	71100 
+tzts5 :	71300 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4162 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4156 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+LaneDetect debug.lane.fps 1497772836274169 16
+LaneDetect debug.lane.alg_fps 1497772836244430 38
+LaneDetect debug.lane.alg_fps 1497772836289039 83
+LaneDetect debug.lane.alg_fps 1497772836365590 58
+LaneDetect debug.lane.alg_fps 1497772836421967 83
+LaneDetect debug.lane.alg_fps 1497772836484091 90
+LaneDetect debug.lane.alg_fps 1497772836571154 28
+LaneDetect debug.lane.alg_fps 1497772836614739 66
+LaneDetect debug.lane.alg_fps 1497772836678987 90
+LaneDetect debug.lane.alg_fps 1497772836743345 83
+LaneDetect debug.lane.alg_fps 1497772836809285 66
+LaneDetect debug.lane.alg_fps 1497772836876117 62
+LaneDetect debug.lane.alg_fps 1497772836946243 43
+LaneDetect debug.lane.alg_fps 1497772837010992 58
+LaneDetect debug.lane.alg_fps 1497772837085640 38
+LaneDetect debug.lane.alg_fps 1497772837126155 90
+LaneDetect debug.lane.alg_fps 1497772837188000 111
+LaneDetect debug.lane.fps 1497772836343563 14
+LaneDetect debug.lane.fps 1497772836406799 16
+LaneDetect debug.lane.fps 1497772836470037 16
+LaneDetect debug.lane.fps 1497772836533172 16
+LaneDetect debug.lane.fps 1497772836596323 16
+LaneDetect debug.lane.fps 1497772836664577 14
+LaneDetect debug.lane.fps 1497772836728078 16
+LaneDetect debug.lane.fps 1497772836791268 16
+LaneDetect debug.lane.fps 1497772836856585 15
+LaneDetect debug.lane.fps 1497772836920358 16
+LaneDetect debug.lane.fps 1497772836985931 15
+LaneDetect debug.lane.fps 1497772837049203 16
+LaneDetect debug.lane.fps 1497772837112773 16
+LaneDetect debug.lane.fps 1497772837175633 16
+LaneDetect debug.lane.fps 1497772837238768 16
+VehicleDetect debug.vehicle.alg_fps 1497772835689995 17
+VehicleDetect debug.vehicle.alg_fps 1497772835793980 16
+VehicleDetect debug.vehicle.alg_fps 1497772835885470 18
+VehicleDetect debug.vehicle.alg_fps 1497772835984324 19
+VehicleDetect debug.vehicle.alg_fps 1497772836082149 20
+VehicleDetect debug.vehicle.alg_fps 1497772836191363 17
+VehicleDetect debug.vehicle.alg_fps 1497772836292818 17
+VehicleDetect debug.vehicle.alg_fps 1497772836395802 16
+VehicleDetect debug.vehicle.alg_fps 1497772836474284 26
+VehicleDetect debug.vehicle.alg_fps 1497772836596171 17
+VehicleDetect debug.vehicle.alg_fps 1497772836687822 20
+VehicleDetect debug.vehicle.alg_fps 1497772836794957 18
+VehicleDetect debug.vehicle.alg_fps 1497772836887461 21
+VehicleDetect debug.vehicle.alg_fps 1497772837011644 14
+VehicleDetect debug.vehicle.alg_fps 1497772837092959 19
+VehicleDetect debug.vehicle.alg_fps 1497772837190896 20
+LaneDetect debug.lane.alg_fps 1497772837249608 125
+DMSWS output.info.v1.process_fps 1497772836345775 14.736842
+DMSWS output.info.v1.process_fps 1497772836417446 15.317286
+DMSWS output.info.v1.process_fps 1497772836505809 14.432990
+DMSWS output.info.v1.process_fps 1497772836537290 14.721346
+DMSWS output.info.v1.process_fps 1497772836642429 14.553015
+DMSWS output.info.v1.process_fps 1497772836709847 14.028056
+DMSWS output.info.v1.process_fps 1497772836739840 14.799154
+DMSWS output.info.v1.process_fps 1497772836821463 14.909478
+DMSWS output.info.v1.process_fps 1497772836924155 14.364641
+DMSWS output.info.v1.process_fps 1497772836966117 14.783527
+DMSWS output.info.v1.process_fps 1497772837018726 15.000000
+DMSWS output.info.v1.process_fps 1497772837116729 14.300306
+DMSWS output.info.v1.process_fps 1497772837155672 15.005359
+DMSWS output.info.v1.process_fps 1497772837229925 14.814815
+VehicleDetect debug.vehicle.alg_fps 1497772837298967 17
+LaneDetect debug.lane.fps 1497772837303325 15
+
+----Output info----
+timeStamp:1497772837313995
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	83200 
+mtktspa :	-127000 
+mtktspmic :	62478 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	74920 
+mt6356tsbuck2 :	73309 
+mtktscharger :	30000 
+mtktsAP :	63000 
+mtktsbtsmdpa :	60000 
+tzts1 :	77700 
+tzts2 :	83800 
+tzts3 :	71700 
+tzts4 :	70900 
+tzts5 :	71100 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4169 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4164 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+LaneDetect debug.lane.alg_fps 1497772837327729 50
+DMSWS output.info.v1.process_fps 1497772837327747 14.256619
+DMSWS output.info.v1.process_fps 1497772837359888 14.861996
+LaneDetect debug.lane.fps 1497772837366620 16
+LaneDetect debug.lane.alg_fps 1497772837394365 40
+VehicleDetect debug.vehicle.alg_fps 1497772837416601 13
+LaneDetect debug.lane.fps 1497772837429857 16
+DMSWS output.info.v1.process_fps 1497772837437110 15.005359
+LaneDetect debug.lane.alg_fps 1497772837441760 111
+VehicleDetect debug.vehicle.alg_fps 1497772837479147 29
+LaneDetect debug.lane.fps 1497772837492997 16
+LaneDetect debug.lane.alg_fps 1497772837510084 71
+DMSWS output.info.v1.process_fps 1497772837519366 14.256619
+DMSWS output.info.v1.process_fps 1497772837549431 15.435502
+LaneDetect debug.lane.fps 1497772837563828 14
+VehicleDetect debug.vehicle.alg_fps 1497772837587500 23
+LaneDetect debug.lane.alg_fps 1497772837589984 47
+LaneDetect debug.lane.fps 1497772837626898 16
+LaneDetect debug.lane.alg_fps 1497772837639058 111
+DMSWS output.info.v1.process_fps 1497772837650511 14.893617
+LaneDetect debug.lane.fps 1497772837690039 16
+VehicleDetect debug.vehicle.alg_fps 1497772837690050 22
+LaneDetect debug.lane.alg_fps 1497772837708916 62
+DMSWS output.info.v1.process_fps 1497772837734356 14.084507
+LaneDetect debug.lane.fps 1497772837754309 15
+DMSWS output.info.v1.process_fps 1497772837765592 14.830508
+LaneDetect debug.lane.alg_fps 1497772837771624 71
+VehicleDetect debug.vehicle.alg_fps 1497772837795340 20
+LaneDetect debug.lane.fps 1497772837817484 16
+LaneDetect debug.lane.alg_fps 1497772837831227 90
+DMSWS output.info.v1.process_fps 1497772837834231 15.384615
+LaneDetect debug.lane.fps 1497772837880672 16
+VehicleDetect debug.vehicle.alg_fps 1497772837890482 22
+LaneDetect debug.lane.alg_fps 1497772837895310 83
+DMSWS output.info.v1.process_fps 1497772837927002 14.568158
+LaneDetect debug.lane.fps 1497772837943832 16
+DMSWS output.info.v1.process_fps 1497772837958917 15.105741
+LaneDetect debug.lane.alg_fps 1497772837977411 33
+VehicleDetect debug.vehicle.alg_fps 1497772837995646 20
+LaneDetect debug.lane.fps 1497772838006952 16
+LaneDetect debug.lane.alg_fps 1497772838017036 125
+DMSWS output.info.v1.process_fps 1497772838065155 14.767933
+LaneDetect debug.lane.fps 1497772838070061 16
+LaneDetect debug.lane.alg_fps 1497772838094721 58
+VehicleDetect debug.vehicle.alg_fps 1497772838111220 15
+DMSWS output.info.v1.process_fps 1497772838122681 14.432990
+LaneDetect debug.lane.fps 1497772838137258 16
+LaneDetect debug.lane.alg_fps 1497772838182598 23
+DMSWS output.info.v1.process_fps 1497772838195004 14.507772
+LaneDetect debug.lane.fps 1497772838200283 16
+VehicleDetect debug.vehicle.alg_fps 1497772838208457 16
+LaneDetect debug.lane.alg_fps 1497772838213981 111
+LaneDetect debug.lane.fps 1497772838263399 16
+
+----Output info----
+timeStamp:1497772838270551
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	83800 
+mtktspa :	-127000 
+mtktspmic :	62626 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	74920 
+mt6356tsbuck2 :	73309 
+mtktscharger :	30000 
+mtktsAP :	63000 
+mtktsbtsmdpa :	60000 
+tzts1 :	78600 
+tzts2 :	84600 
+tzts3 :	71800 
+tzts4 :	71100 
+tzts5 :	72100 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4266 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4260 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+DMSWS output.info.v1.process_fps 1497772838283597 14.659686
+LaneDetect debug.lane.alg_fps 1497772838285056 58
+VehicleDetect debug.vehicle.alg_fps 1497772838291560 23
+LaneDetect debug.lane.fps 1497772838326657 16
+DMSWS output.info.v1.process_fps 1497772838338943 14.300306
+LaneDetect debug.lane.alg_fps 1497772838350993 50
+DMSWS output.info.v1.process_fps 1497772838370131 15.005359
+LaneDetect debug.lane.fps 1497772838389815 16
+VehicleDetect debug.vehicle.alg_fps 1497772838398578 20
+LaneDetect debug.lane.alg_fps 1497772838409144 62
+LaneDetect debug.lane.fps 1497772838453047 16
+DMSWS output.info.v1.process_fps 1497772838478442 14.598540
+LaneDetect debug.lane.alg_fps 1497772838491540 27
+VehicleDetect debug.vehicle.alg_fps 1497772838508087 17
+LaneDetect debug.lane.fps 1497772838516264 16
+DMSWS output.info.v1.process_fps 1497772838531100 14.256619
+LaneDetect debug.lane.alg_fps 1497772838534344 66
+LaneDetect debug.lane.fps 1497772838583287 15
+LaneDetect debug.lane.alg_fps 1497772838597977 83
+VehicleDetect debug.vehicle.alg_fps 1497772838598792 20
+DMSWS output.info.v1.process_fps 1497772838607237 14.629049
+LaneDetect debug.lane.fps 1497772838646410 16
+LaneDetect debug.lane.alg_fps 1497772838675611 37
+DMSWS output.info.v1.process_fps 1497772838689092 14.659686
+VehicleDetect debug.vehicle.alg_fps 1497772838708991 18
+LaneDetect debug.lane.fps 1497772838709596 16
+LaneDetect debug.lane.alg_fps 1497772838722167 111
+DMSWS output.info.v1.process_fps 1497772838744946 14.285714
+LaneDetect debug.lane.fps 1497772838773501 16
+DMSWS output.info.v1.process_fps 1497772838776739 14.846235
+LaneDetect debug.lane.alg_fps 1497772838790487 71
+VehicleDetect debug.vehicle.alg_fps 1497772838812069 17
+LaneDetect debug.lane.fps 1497772838836656 16
+LaneDetect debug.lane.alg_fps 1497772838850537 90
+VehicleDetect debug.vehicle.alg_fps 1497772838895067 25
+DMSWS output.info.v1.process_fps 1497772838899364 14.403293
+LaneDetect debug.lane.fps 1497772838899698 16
+LaneDetect debug.lane.alg_fps 1497772838921804 52
+DMSWS output.info.v1.process_fps 1497772838961685 14.492754
+LaneDetect debug.lane.fps 1497772838962951 16
+LaneDetect debug.lane.alg_fps 1497772838989913 41
+DMSWS output.info.v1.process_fps 1497772839015325 14.736842
+VehicleDetect debug.vehicle.alg_fps 1497772839016356 16
+LaneDetect debug.lane.fps 1497772839026278 16
+LaneDetect debug.lane.alg_fps 1497772839038631 100
+LaneDetect debug.lane.fps 1497772839089370 16
+DMSWS output.info.v1.process_fps 1497772839091978 14.447885
+VehicleDetect debug.vehicle.alg_fps 1497772839110234 20
+LaneDetect debug.lane.alg_fps 1497772839110716 55
+DMSWS output.info.v1.process_fps 1497772839147014 14.705882
+LaneDetect debug.lane.fps 1497772839152729 16
+LaneDetect debug.lane.alg_fps 1497772839173438 58
+VehicleDetect debug.vehicle.alg_fps 1497772839203988 22
+DMSWS output.info.v1.process_fps 1497772839213138 15.053763
+LaneDetect debug.lane.fps 1497772839219186 15
+LaneDetect debug.lane.alg_fps 1497772839231116 125
+LaneDetect debug.lane.fps 1497772839282552 16
+
+----Output info----
+timeStamp:1497772839284879
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	82700 
+mtktspa :	-127000 
+mtktspmic :	62626 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	74920 
+mt6356tsbuck2 :	72772 
+mtktscharger :	30000 
+mtktsAP :	63000 
+mtktsbtsmdpa :	60000 
+tzts1 :	76200 
+tzts2 :	82700 
+tzts3 :	71500 
+tzts4 :	70700 
+tzts5 :	71100 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4364 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4358 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+DMSWS output.info.v1.process_fps 1497772839294586 14.629049
+LaneDetect debug.lane.alg_fps 1497772839312069 38
+VehicleDetect debug.vehicle.alg_fps 1497772839316497 17
+LaneDetect debug.lane.fps 1497772839345882 16
+DMSWS output.info.v1.process_fps 1497772839357280 14.184397
+LaneDetect debug.lane.alg_fps 1497772839378047 34
+VehicleDetect debug.vehicle.alg_fps 1497772839402900 23
+LaneDetect debug.lane.fps 1497772839409143 16
+LaneDetect debug.lane.alg_fps 1497772839418218 166
+DMSWS output.info.v1.process_fps 1497772839420265 14.861996
+LaneDetect debug.lane.fps 1497772839474017 15
+DMSWS output.info.v1.process_fps 1497772839502250 14.418126
+LaneDetect debug.lane.alg_fps 1497772839501998 43
+VehicleDetect debug.vehicle.alg_fps 1497772839508544 20
+LaneDetect debug.lane.fps 1497772839537199 16
+LaneDetect debug.lane.alg_fps 1497772839553212 76
+DMSWS output.info.v1.process_fps 1497772839560677 14.690452
+DMSWS output.info.v1.process_fps 1497772839599809 15.120968
+LaneDetect debug.lane.fps 1497772839600945 15
+VehicleDetect debug.vehicle.alg_fps 1497772839622455 17
+LaneDetect debug.lane.alg_fps 1497772839626465 45
+LaneDetect debug.lane.fps 1497772839664146 16
+LaneDetect debug.lane.alg_fps 1497772839679656 76
+DMSWS output.info.v1.process_fps 1497772839714078 14.507772
+VehicleDetect debug.vehicle.alg_fps 1497772839726908 15
+LaneDetect debug.lane.fps 1497772839727019 16
+LaneDetect debug.lane.alg_fps 1497772839740683 111
+DMSWS output.info.v1.process_fps 1497772839759193 14.256619
+LaneDetect debug.lane.fps 1497772839790872 16
+LaneDetect debug.lane.alg_fps 1497772839808075 71
+VehicleDetect debug.vehicle.alg_fps 1497772839808548 21
+DMSWS output.info.v1.process_fps 1497772839831100 15.021460
+LaneDetect debug.lane.fps 1497772839854060 16
+LaneDetect debug.lane.alg_fps 1497772839879341 45
+VehicleDetect debug.vehicle.alg_fps 1497772839905326 23
+LaneDetect debug.lane.fps 1497772839917290 16
+DMSWS output.info.v1.process_fps 1497772839920194 14.613779
+LaneDetect debug.lane.alg_fps 1497772839932369 100
+DMSWS output.info.v1.process_fps 1497772839970148 14.659686
+LaneDetect debug.lane.fps 1497772839980474 16
+LaneDetect debug.lane.alg_fps 1497772839999713 62
+DMSWS output.info.v1.process_fps 1497772840011664 15.045135
+VehicleDetect debug.vehicle.alg_fps 1497772840021784 17
+LaneDetect debug.lane.fps 1497772840043610 16
+LaneDetect debug.lane.alg_fps 1497772840058414 83
+DMSWS output.info.v1.process_fps 1497772840092930 14.799154
+VehicleDetect debug.vehicle.alg_fps 1497772840105510 24
+LaneDetect debug.lane.fps 1497772840107581 15
+LaneDetect debug.lane.alg_fps 1497772840127018 66
+DMSWS output.info.v1.process_fps 1497772840172528 14.598540
+LaneDetect debug.lane.fps 1497772840171607 16
+LaneDetect debug.lane.alg_fps 1497772840197444 43
+VehicleDetect debug.vehicle.alg_fps 1497772840224369 16
+LaneDetect debug.lane.fps 1497772840234768 16
+DMSWS output.info.v1.process_fps 1497772840242353 14.783527
+LaneDetect debug.lane.alg_fps 1497772840248817 90
+LaneDetect debug.lane.fps 1497772840297876 16
+
+----Output info----
+timeStamp:1497772840302128
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	82800 
+mtktspa :	-127000 
+mtktspmic :	62775 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	75456 
+mt6356tsbuck2 :	73309 
+mtktscharger :	30000 
+mtktsAP :	64000 
+mtktsbtsmdpa :	60000 
+tzts1 :	76400 
+tzts2 :	82800 
+tzts3 :	71900 
+tzts4 :	71800 
+tzts5 :	71700 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4464 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4458 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+VehicleDetect debug.vehicle.alg_fps 1497772840304233 26
+LaneDetect debug.lane.alg_fps 1497772840319073 58
+DMSWS output.info.v1.process_fps 1497772840331303 14.373716
+LaneDetect debug.lane.fps 1497772840361885 16
+DMSWS output.info.v1.process_fps 1497772840383245 14.553015
+LaneDetect debug.lane.alg_fps 1497772840393369 41
+DMSWS output.info.v1.process_fps 1497772840420879 15.000000
+VehicleDetect debug.vehicle.alg_fps 1497772840424755 17
+LaneDetect debug.lane.fps 1497772840425063 16
+LaneDetect debug.lane.alg_fps 1497772840435691 125
+LaneDetect debug.lane.fps 1497772840488552 15
+DMSWS output.info.v1.process_fps 1497772840496184 15.090543
+LaneDetect debug.lane.alg_fps 1497772840508897 76
+VehicleDetect debug.vehicle.alg_fps 1497772840512103 22
+LaneDetect debug.lane.fps 1497772840552614 16
+DMSWS output.info.v1.process_fps 1497772840577470 14.314928
+LaneDetect debug.lane.alg_fps 1497772840591253 27
+LaneDetect debug.lane.fps 1497772840615659 16
+LaneDetect debug.lane.alg_fps 1497772840631481 76
+VehicleDetect debug.vehicle.alg_fps 1497772840641398 13
+DMSWS output.info.v1.process_fps 1497772840647287 14.941302
+LaneDetect debug.lane.fps 1497772840678760 16
+VehicleDetect debug.vehicle.alg_fps 1497772840702546 29
+LaneDetect debug.lane.alg_fps 1497772840704190 52
+DMSWS output.info.v1.process_fps 1497772840735170 14.358974
+LaneDetect debug.lane.fps 1497772840741757 16
+LaneDetect debug.lane.alg_fps 1497772840753464 125
+DMSWS output.info.v1.process_fps 1497772840788456 14.644351
+LaneDetect debug.lane.fps 1497772840804913 16
+VehicleDetect debug.vehicle.alg_fps 1497772840819002 20
+LaneDetect debug.lane.alg_fps 1497772840826116 55
+DMSWS output.info.v1.process_fps 1497772840848880 15.069967
+LaneDetect debug.lane.fps 1497772840868221 16
+LaneDetect debug.lane.alg_fps 1497772840890420 52
+VehicleDetect debug.vehicle.alg_fps 1497772840916023 22
+LaneDetect debug.lane.fps 1497772840931475 16
+DMSWS output.info.v1.process_fps 1497772840931312 14.568158
+LaneDetect debug.lane.alg_fps 1497772840946769 76
+DMSWS output.info.v1.process_fps 1497772840981146 14.447885
+LaneDetect debug.lane.fps 1497772840994735 16
+LaneDetect debug.lane.alg_fps 1497772841014716 71
+VehicleDetect debug.vehicle.alg_fps 1497772841026871 17
+DMSWS output.info.v1.process_fps 1497772841043769 14.736842
+LaneDetect debug.lane.fps 1497772841058877 16
+LaneDetect debug.lane.alg_fps 1497772841091393 37
+VehicleDetect debug.vehicle.alg_fps 1497772841114259 23
+LaneDetect debug.lane.fps 1497772841123350 16
+DMSWS output.info.v1.process_fps 1497772841125969 14.675053
+LaneDetect debug.lane.alg_fps 1497772841137649 90
+LaneDetect debug.lane.fps 1497772841186604 16
+LaneDetect debug.lane.alg_fps 1497772841216516 37
+DMSWS output.info.v1.process_fps 1497772841221557 14.300306
+VehicleDetect debug.vehicle.alg_fps 1497772841231217 17
+LaneDetect debug.lane.fps 1497772841249860 16
+DMSWS output.info.v1.process_fps 1497772841257568 15.102481
+LaneDetect debug.lane.alg_fps 1497772841263565 125
+VehicleDetect debug.vehicle.alg_fps 1497772841309431 27
+
+----Output info----
+timeStamp:1497772841311233
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	83600 
+mtktspa :	-127000 
+mtktspmic :	63073 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	75456 
+mt6356tsbuck2 :	73846 
+mtktscharger :	30000 
+mtktsAP :	64000 
+mtktsbtsmdpa :	60000 
+tzts1 :	77100 
+tzts2 :	83600 
+tzts3 :	72200 
+tzts4 :	71500 
+tzts5 :	72700 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4564 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4558 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+LaneDetect debug.lane.fps 1497772841313097 16
+LaneDetect debug.lane.alg_fps 1497772841326287 111
+DMSWS output.info.v1.process_fps 1497772841332935 14.736842
+LaneDetect debug.lane.fps 1497772841377466 16
+LaneDetect debug.lane.alg_fps 1497772841422166 23
+DMSWS output.info.v1.process_fps 1497772841422295 14.038877
+VehicleDetect debug.vehicle.alg_fps 1497772841437541 15
+LaneDetect debug.lane.fps 1497772841440504 16
+DMSWS output.info.v1.process_fps 1497772841453100 14.629049
+LaneDetect debug.lane.alg_fps 1497772841457972 76
+LaneDetect debug.lane.fps 1497772841505375 15
+VehicleDetect debug.vehicle.alg_fps 1497772841514587 26
+LaneDetect debug.lane.alg_fps 1497772841522137 71
+DMSWS output.info.v1.process_fps 1497772841532086 14.659686
+LaneDetect debug.lane.fps 1497772841568507 16
+LaneDetect debug.lane.alg_fps 1497772841601881 37
+DMSWS output.info.v1.process_fps 1497772841625368 14.314928
+LaneDetect debug.lane.fps 1497772841631738 16
+LaneDetect debug.lane.alg_fps 1497772841644975 100
+VehicleDetect debug.vehicle.alg_fps 1497772841649554 13
+DMSWS output.info.v1.process_fps 1497772841658175 15.167931
+LaneDetect debug.lane.fps 1497772841694967 16
+LaneDetect debug.lane.alg_fps 1497772841714345 71
+VehicleDetect debug.vehicle.alg_fps 1497772841724218 20
+DMSWS output.info.v1.process_fps 1497772841746108 14.659686
+LaneDetect debug.lane.fps 1497772841758547 16
+LaneDetect debug.lane.alg_fps 1497772841772690 83
+DMSWS output.info.v1.process_fps 1497772841808005 14.629049
+LaneDetect debug.lane.fps 1497772841821619 16
+VehicleDetect debug.vehicle.alg_fps 1497772841826427 20
+LaneDetect debug.lane.alg_fps 1497772841836651 83
+DMSWS output.info.v1.process_fps 1497772841867460 14.957265
+LaneDetect debug.lane.fps 1497772841884777 16
+LaneDetect debug.lane.alg_fps 1497772841899065 83
+VehicleDetect debug.vehicle.alg_fps 1497772841930796 18
+DMSWS output.info.v1.process_fps 1497772841957710796 18
+DMSWS output.info.v1.process_fps 1497772841957710 14.358974
+LaneDetect debug.lane.alg_fps 1497772841966080 100
+LaneDetect debug.lane.fps 1497772842011889 16
+DMSWS output.info.v1.process_fps 1497772842018115 14.358974
+LaneDetect debug.lane.alg_fps 1497772842026537 90
+VehicleDetect debug.vehicle.alg_fps 1497772842026161 20
+LaneDetect debug.lane.fps 1497772842075159 16
+DMSWS output.info.v1.process_fps 1497772842079996 14.690452
+LaneDetect debug.lane.alg_fps 1497772842107738 35
+VehicleDetect debug.vehicle.alg_fps 1497772842133401 18
+DMSWS output.info.v1.process_fps 1497772842135145 15.317286
+LaneDetect debug.lane.fps 1497772842139234 16
+LaneDetect debug.lane.alg_fps 1497772842153575 83
+LaneDetect debug.lane.fps 1497772842205122 15
+DMSWS output.info.v1.process_fps 1497772842221395 15.000000
+LaneDetect debug.lane.alg_fps 1497772842228771 55
+VehicleDetect debug.vehicle.alg_fps 1497772842238239 17
+LaneDetect debug.lane.fps 1497772842268774 16
+LaneDetect debug.lane.alg_fps 1497772842286935 66
+DMSWS output.info.v1.process_fps 1497772842286273 14.675053
+VehicleDetect debug.vehicle.alg_fps 1497772842329634 20
+
+----Output info----
+timeStamp:1497772842331118
+cpu online:0-7 
+mtktsbattery :	-127000 
+mtktscpu :	83000 
+mtktspa :	-127000 
+mtktspmic :	63073 
+mtktswmt :	59000 
+tzimgs0 :	-127000 
+tzimgs1 :	-127000 
+tzimgs2 :	-127000 
+tzimgs3 :	-127000 
+tzimgs4 :	-127000 
+mt6356tsbuck1 :	75993 
+mt6356tsbuck2 :	73846 
+mtktscharger :	30000 
+mtktsAP :	64000 
+mtktsbtsmdpa :	61000 
+tzts1 :	77500 
+tzts2 :	82900 
+tzts3 :	72200 
+tzts4 :	71800 
+tzts5 :	72300 
+CPU#0:	1508000 
+CPU#1:	1508000 
+CPU#2:	1508000 
+CPU#3:	1508000 
+CPU#4:	2002000 
+CPU#5:	2002000 
+CPU#6:	2002000 
+CPU#7:	2002000 
+Cluster#0:1508000 4667 1482000 22 1430000 14 1404000 10 1365000 0 1300000 0 1235000 0 1183000 10 1105000 10 1001000 13 884000 69 793000 91 715000 0 624000 0 481000 0 338000 103 
+Cluster#1:2002000 4661 1976000 25 1937000 37 1911000 12 1859000 2 1807000 2 1742000 0 1690000 12 1586000 14 1456000 2 1287000 10 1170000 91 1040000 0 910000 0 715000 5 520000 136 
+Current Power:current power = 1925 min power = 374 max power = 1925 
+LaneDetect debug.lane.fps 1497772842332771 15
+DMSWS output.info.v1.process_fps 1497772842340432 15.250545
+LaneDetect debug.lane.alg_fps 1497772842352433 83
+LaneDetect debug.lane.fps 1497772842397815 16
+DMSWS output.info.v1.process_fps 1497772842431818 14.300306
+VehicleDetect debug.vehicle.alg_fps 1497772842441896 16
+LaneDetect debug.lane.alg_fps 1497772842444084 23
+LaneDetect debug.lane.fps 1497772842461288 16
+DMSWS output.info.v1.process_fps 1497772842468087 14.957265
+LaneDetect debug.lane.alg_fps 1497772842473905 100
+VehicleDetect debug.vehicle.alg_fps 1497772842519126 27
+LaneDetect debug.lane.fps 1497772842524436 16
+LaneDetect debug.lane.alg_fps 1497772842538717 83
+DMSWS output.info.v1.process_fps 1497772842571441 14.799154
+LaneDetect debug.lane.fps 1497772842588352 15
+DMSWS output.info.v1.process_fps 1497772842627077 14.432990
+LaneDetect debug.lane.alg_fps 1497772842627660 27
+VehicleDetect debug.vehicle.alg_fps 1497772842647184 15
+LaneDetect debug.lane.fps 1497772842651437 16
+LaneDetect debug.lane.alg_fps 1497772842662053 142
+DMSWS output.info.v1.process_fps 1497772842691024 14.752371
+LaneDetect debug.lane.fps 1497772842715377 16
+VehicleDetect debug.vehicle.alg_fps 1497772842723927 24
+LaneDetect debug.lane.alg_fps 1497772842734117 62
+DMSWS output.info.v1.process_fps 1497772842760210 14.675053
+LaneDetect debug.lane.fps 1497772842778542 16
+LaneDetect debug.lane.alg_fps 1497772842806154 40
+VehicleDetect debug.vehicle.alg_fps 1497772842828254 22
+LaneDetect debug.lane.fps 1497772842841599 16
+DMSWS output.info.v1.process_fps 1497772842850495 14.242116
+LaneDetect debug.lane.alg_fps 1497772842855458 90
+DMSWS output.info.v1.process_fps 1497772842887682 15.021460
+LaneDetect debug.lane.fps 1497772842904977 16
+VehicleDetect debug.vehicle.alg_fps 1497772842935269 20
+LaneDetect debug.lane.alg_fps 1497772842939368 34
+LaneDetect debug.lane.fps 1497772842971753 15
+DMSWS output.info.v1.process_fps 1497772842969418 14.721346
+LaneDetect debug.lane.alg_fps 1497772842982974 125
+LaneDetect debug.lane.fps 1497772843034981 16
+LaneDetect debug.lane.alg_fps 1497772843057802 50
+VehicleDetect debug.vehicle.alg_fps 1497772843061758 13
+DMSWS output.info.v1.process_fps 1497772843072776 14.084507
+LaneDetect debug.lane.fps 1497772843098142 16
+DMSWS output.info.v1.process_fps 1497772843104787 14.447885
+LaneDetect debug.lane.alg_fps 1497772843129384 66
+VehicleDetect debug.vehicle.alg_fps 1497772843129852 22
+LaneDetect debug.lane.fps 1497772843161519 16
+LaneDetect debug.lane.alg_fps 1497772843172178 125
+DMSWS output.info.v1.process_fps 1497772843176565 14.659686
+LaneDetect debug.lane.fps 1497772843224659 16
+VehicleDetect debug.vehicle.alg_fps 1497772843228496 23
+LaneDetect debug.lane.alg_fps 1497772843235030 125
+DMSWS output.info.v1.process_fps 1497772843269992 14.227642
+LaneDetect debug.lane.fps 1497772843287783 16
+DMSWS output.info.v1.process_fps 1497772843311335 14.418126
+LaneDetect debug.lane.alg_fps 1497772843316554 40
+VehicleDetect debug.vehicle.alg_fps 1497772843334865 20
+

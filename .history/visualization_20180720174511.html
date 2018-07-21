@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<meta charset="utf-8" />
+
+<title>Minieye-web 数据可视化</title>
+
+<script src="echarts.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
+<script language="javascript" type="text/javascript">
+
+    INTERVAL = setInterval('',1000);
+    // var line_set_name = ['温度','小核频率','大核频率', 'FPS'];
+    var line_set_name = ['温度','小核频率','大核频率',
+                         'lane_alg_fps', 'lane_fps',
+                         'vehicle_alg_fps',
+                         'v1_process_fps',
+                         '功率'
+                         ];
+
+    var CPU_temp=[],CPU_one_frequency=[],CPU_two_frequency=[],CPU_power=[],timeStamp=[];
+
+    function doConnect(){
+        websocket = new WebSocket('ws://127.0.0.1:1213/chat');
+        websocket.onopen = function(evt) { onOpen(evt) };
+        websocket.onclose = function(evt) { onClose(evt) };
+        websocket.onmessage = function(evt) { onMessage(evt) };
+        websocket.onerror = function(evt) { onError(evt) };
+    }
+
+    function onOpen(evt){
+        console.log('connected');
+    }
+    function onClose(evt){
+        console.log(evt);
+        var code = evt.code;
+        var reason = evt.reason;
+        var wasClean = evt.wasClean;
+        console.log('websocke closed');
+
+    }
+    function onMessage(evt){
+
+        try{
+            var data_set =JSON.parse(evt.data);
+            console.log(data_set);
+            drawEcharts(data_set);
+        }catch(e){
+            console.log('it is not a json');
+            console.log(evt.data);
+        }
+        
+    }
+    function onError(evt){
+        console.log(evt);
+        websocket.close();
+    }
+    
+
+    function init(){
+        doConnect();
+        myChart = echarts.init(document.getElementById('chartmain'));
+                    var option = {
+                        backgroundColor:'white',
+                        title:{
+                            text:'Minieye数据可视化',
+                            subtext:"数据来源：深圳佑驾-Minieye"
+                        },
+                        visualMap:[{
+                            show:false,
+                            type:'continuous',
+                            seriesIndex:0,
+                            min:0,
+                            max:400
+                        }],
+                        toolbox:{
+                            show:true,
+                            feature:{
+                                saveAsImage:{
+                                    show:true,
+                                    title:'另存为图片',
+                                    type:'jpeg',
+                                    name:'test'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            trigger:'axis',
+                            show: true,
+                        },
+                        animation: false,
+                        grid:{
+                            left:'3%',
+                            top:'20%',
+                            right:'3%',
+                            bottom:'8%',
+                            containLabel:true
+                        },
+                        legend: {
+                            data: []
+                        },
+                        xAxis: [
+                            {   
+                                type: 'category',
+                                boundaryGap: false,                                
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                type: 'value',
+                                name: '速度(km/h)',
+                            }
+                        ],
+                        dataZoom:[                                      //区域缩放  
+                            {  
+                                id: 'dataZoomX',  
+                                show:true,                              //是否显示 组件。如果设置为 false，不会显示，但是数据过滤的功能还存在。  
+                                backgroundColor:"rgba(47,69,84,0)",  //组件的背景颜色  
+                                type: 'slider',                         //slider表示有滑动块的，inside表示内置的  
+                                fillerColor:"rgba(167,183,204,0.4)",  //选中范围的填充颜色。  
+                                borderColor:"#ddd",                     //边框颜色。  
+                                filterMode: 'filter',                   //'filter'：当前数据窗口外的数据，被 过滤掉。即 会 影响其他轴的数据范围。每个数据项，只要有一个维度在数据窗口外，整个数据项就会被过滤掉。  
+                                start: 0,                                //数据窗口范围的起始百分比,表示30%  
+                                end: 100,                                  //数据窗口范围的结束百分比,表示70%  
+                                startValue:0,                           //数据窗口范围的起始数值  
+                                endValue:100,                            //数据窗口范围的结束数值。  
+                                orient:"horizontal",                    //布局方式是横还是竖。不仅是布局方式，对于直角坐标系而言，也决定了，缺省情况控制横向数轴还是纵向数轴。'horizontal'：水平。'vertical'：竖直。  
+                                zoomLock:false,                          //是否锁定选择区域（或叫做数据窗口）的大小。如果设置为 true 则锁定选择区域的大小，也就是说，只能平移，不能缩放。  
+                                throttle:100,                             //设置触发视图刷新的频率。单位为毫秒（ms）。  
+                                zoomOnMouseWheel:true,                  //如何触发缩放。可选值为：true：表示不按任何功能键，鼠标滚轮能触发缩放。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标滚轮能触发缩放。'ctrl'：表示按住 ctrl 和鼠标滚轮能触发缩放。'alt'：表示按住 alt 和鼠标滚轮能触发缩放。  
+                                moveOnMouseMove:true,                   //如何触发数据窗口平移。true：表示不按任何功能键，鼠标移动能触发数据窗口平移。false：表示鼠标滚轮不能触发缩放。'shift'：表示按住 shift 和鼠标移动能触发数据窗口平移。'ctrl'：表示按住 ctrl 和鼠标移动能触发数据窗口平移。'alt'：表示按住 alt 和鼠标移动能触发数据窗口平移。  
+                                left:"center",                           //组件离容器左侧的距离,'left', 'center', 'right','20%'  
+                                top:"auto",                               //组件离容器上侧的距离,'top', 'middle', 'bottom','20%'  
+                                right:"auto",                             //组件离容器右侧的距离,'20%'  
+                                bottom:"0",                            //组件离容器下侧的距离,'20%'  
+                            },
+                            {
+                                type:"slider",
+                                show:true,
+                                yAxisIndex:[0],
+                                left:"0%",
+                            }
+                        ],
+                        series: [],
+                        
+                    };
+                    for(var i=0;i<8;i++){
+                        if(i==0){
+                            var line_information={
+                                "name":line_set_name[i],
+                                "type":"line",
+                                "data":[],
+                                "markLine":{
+                                    "data":[]
+                                }
+                            }   
+                        }else{
+                            line_information ={
+                                "name":line_set_name[i],
+                                "type":"line",
+                                "data":[],
+                            }
+                        }
+                        option.series.push(line_information);
+                    }
+        myChart.setOption(option);       
+    }
+
+    function drawEcharts(data_set){
+
+
+        // // 根据时间排序
+        // data_set.sort(function(a,b){
+        //     return a[0]-b[0];
+        // });        
+        var condition_1=Array(data_set.length).fill('-');
+        var condition_2=Array(data_set.length).fill('-');
+        var condition_3=Array(data_set.length).fill('-');
+        var condition_4=Array(data_set.length).fill('-');
+        var lane_alg_fps = Array(data_set.length).fill('-');
+        var lane_fps = Array(data_set.length).fill('-');
+        var vehicle_alg_fps = Array(data_set.length).fill('-');
+        var v1_process_fps = Array(data_set.length).fill('-');
+        var time =[];
+        for(var i =0;i<data_set.length;i++){
+            var date = new Date(Number(data_set[i][0]));
+            if(data_set[i].length!=3){   
+                condition_1[i] = data_set[i][1];
+                condition_2[i] = data_set[i][2];
+                condition_3[i] = data_set[i][3];
+                condition_4[i] = data_set[i][4];
+            }
+            
+            if(data_set[i].length==3){
+                if(data_set[i][2]=="lane_alg_fps"){
+                    lane_alg_fps[i] = data_set[i][1];
+                }else if(data_set[i][2]=="lane_fps"){
+                    lane_fps[i] = data_set[i][1];
+                }else if(data_set[i][2]=="vehicle_alg_fps"){
+                    vehicle_alg_fps[i] = data_set[i][1];
+                }else if(data_set[i][2]=="v1_process_fps"){
+                    v1_process_fps[i] = data_set[i][1];
+                }
+            }
+
+            Y = date.getFullYear() + '-';
+            M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+            D = date.getDate() + ' ';
+            h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+            m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes())+ ':';
+            s = (date.getSeconds() <10 ? '0' + date.getSeconds():date.getSeconds())+ ':';
+            ms = (date.getMilliseconds()<10 ? '0'+date.getMilliseconds():date.getMilliseconds());
+            time.push(Y+M+D+h+m+s+ms);
+        }
+
+        
+        var option = myChart.getOption();
+        //设置横坐标纵坐标
+        option.xAxis[0].data = time;
+        option.series[0].data=condition_1;
+        var degree_reference_one = [{
+            "name":'80辅助线',
+            "yAxis":80
+        },
+        {
+            "name":'85辅助线',
+            "yAxis":85
+        },
+        {
+            "name":'90辅助线',
+            "yAxis":90
+        }];
+        option.series[0].markLine.data=degree_reference_one
+        option.series[1].data=condition_2;
+        option.series[2].data=condition_3;
+        option.series[0].connectNulls = true;
+        option.series[1].connectNulls = true;
+        option.series[2].connectNulls = true;
+        option.series[3].data=lane_alg_fps;
+        option.series[4].data=lane_fps;
+        option.series[5].data=vehicle_alg_fps;
+        option.series[6].data=v1_process_fps;
+        option.series[3].connectNulls = true;
+        option.series[4].connectNulls = true;
+        option.series[5].connectNulls = true;
+        option.series[6].connectNulls = true;
+        option.series[7].data = condition_4;
+        option.series[7].connectNulls = true;
+
+        
+        option.legend[0].data=['温度','小核频率','大核频率',
+        'lane_alg_fps', 'lane_fps',
+        'vehicle_alg_fps',
+        'v1_process_fps','功率'];
+        myChart.setOption(option);
+
+        myChart.hideLoading();
+
+    }
+
+
+    function check() {
+        
+        var objFile = document.getElementById("fileId");
+        if(objFile.value == "") {
+            alert("请选择你要可视化的文件");    
+        }else{
+            var fileString ='';
+            var files = $('#fileId').attr('files');
+            if(files.length==0){
+                alert('文件不能为空');
+                return;
+            }
+            var file = files[0];
+            var reader = new FileReader();
+            reader.readAsText(file,"UTF-8");
+            myChart.showLoading();
+            reader.onload=function(evt){
+                console.log(evt.target.result)
+                websocket.send("file"+evt.target.result);
+                // data_manipulation(evt.target.result)
+            }
+        }
+    }
+
+
+    function data_manipulation(objs,names){
+
+            var test = objs.split('\n');
+            CPU_temp=[],CPU_one_frequency=[],CPU_two_frequency=[],CPU_power=[],data_set=[],timeStamp=[];
+            
+            for(var i =0;i<test.length;i++){
+                //跳过input info 里的数据
+                if(test[i].indexOf("Input info")!=-1){
+                    while(test[i].indexOf("Output info")==-1){
+                        i = i+1;
+                    }
+                }else if(test[i].indexOf("mtktscpu :")!=-1){
+                    var number= test[i].split(":");
+                    CPU_temp.push(Number(number[1].replace(/(^\s*)|(\s*$)/g, ""))/1000);
+                }else if(test[i].indexOf("CPU#0:")!=-1){
+                    var number= test[i].split(":");
+                    CPU_one_frequency.push(Number(number[1].replace(/(^\s*)|(\s*$)/g, ""))/10000);
+                }else if(test[i].indexOf("CPU#4:")!=-1){
+                    var number= test[i].split(":");
+                    CPU_two_frequency.push(Number(number[1].replace(/(^\s*)|(\s*$)/g, ""))/10000);
+                }else if(test[i].indexOf("Current Power:")!=-1){
+                    var power_line = test[i].split("min");
+                    var power_raw = power_line[0].split("=");
+                    var number = power_raw[1].replace(/(^\s*)|(\s*$)/g, "");
+                    CPU_power.push(Number(number)/10);
+                }else if(test[i].indexOf("lane.alg_fps")!=-1){
+                    var info = test[i].split("lane.alg_fps");
+                    var number= info[1].replace(/(^\s*)|(\s*$)/g, "").split(" ");
+                    if(Number(number[0])<10000){
+                        continue;
+                    }else{
+                        data_set.push([number[0].substring(0,13),Number(number[number.length-1]),'lane_alg_fps'])
+                    }
+                }else if(test[i].indexOf("lane.fps")!=-1){
+                    var info =test[i].split("lane.fps");
+                    var number= info[1].replace(/(^\s*)|(\s*$)/g, "").split(" ");
+                    data_set.push([number[0].substring(0,13),Number(number[number.length-1]),'lane_fps'])
+                }else if(test[i].indexOf("vehicle.alg_fps")!=-1){
+                    var info = test[i].split("vehicle.alg_fps");
+                    var number= info[1].replace(/(^\s*)|(\s*$)/g, "").split(" ");
+                    data_set.push([number[0].substring(0,13),Number(number[number.length-1]),'vehicle_alg_fps'])
+                }else if(test[i].indexOf("v1.process_fps")!=-1){
+                    var number= test[i].split(" ")
+                    if (number.length == 4) {
+                        if(number[number.length-2].length==9){
+                            data_set.push([number[number.length-2].substring(0,13)+'0000',Number(number[number.length-1]),'v1_process_fps']);
+                            //v1_process_fps有一个dirty meta
+                        }else if(Number(number[number.length-1]>10000)){
+                            continue;
+                        }else{
+                            data_set.push([number[number.length-2].substring(0,13),Number(number[number.length-1]),'v1_process_fps']);
+                        }
+                    }
+                }else if(test[i].indexOf("timeStamp")!=-1){
+                    var number =test[i].split(":");
+                    timeStamp.push((number[1].replace(/(^\s*)|(\s*$)/g, "")).substring(0,13));
+                }
+            }
+
+
+            for(var i =0;i<timeStamp.length;i++){
+                data_set.push([timeStamp[i],CPU_temp[i],CPU_one_frequency[i],CPU_two_frequency[i],CPU_power[i],'condition']);
+            }
+
+           
+            // drawEcharts();
+    }
+
+
+    
+  
+  
+</script>
+<body onload='init()' style="height:100%;width:100%">
+
+    <div id="chartmain" style="width:100%; height: 70%;"></div>
+
+    <br>
+    <hr>
+    <form id='input-line' action='fileUploading' method="post" enctype="multipart/form-data">
+        <input style="margin-left:3%" type="file" name = "file" id = "fileId" /> 
+        <button  type = "submit" name = "btn"  value = "提交" id = "btnId" onclick="check()" > 提交</button>
+    </form>
+    <br>
+    
+</body>
+<style>
+
+    button{
+        /* margin:10px 0 0 10px; */
+        /* width:100px; */
+        box-shadow: none;
+        outline: none;
+        width:150px;
+        text-align:center;
+        line-height:100%;
+        padding-top:0.5em;
+        padding-right:2em;
+        padding-bottom:0.55em;
+        padding-left:2em;
+        font-family:Arial,sans-serif;
+        font-size:14px;
+        font-style:normal;
+        font-variant:normal;
+        font-weight:normal;
+        text-decoration:none;
+        margin-top:0px;
+        margin-right:2px;
+        margin-bottom:0px;
+        margin-left:2px;
+        vertical-align:text-bottom;
+        display:inline-block;
+        cursor:pointer;
+        zoom:1;
+        outline-width:medium;
+        outline-color:invert;
+        font-size-adjust:none;
+        font-stretch:normal;
+        border-top-left-radius:0.5em;
+        border-top-right-radius:0.5em;
+        border-bottom-left-radius:0.5em;
+        border-bottom-right-radius:0.5em;
+        box-shadow:0px 1px 2px rgba(0,0,0,0.2);
+        text-shadow:0px 1px 1px rgba(0,0,0,0.3);
+        /* color:#fefee9; */
+        border-top-color:#da7c0c;
+        border-right-color:#da7c0c;
+        border-bottom-color:#da7c0c;
+        border-left-color:#da7c0c;
+        border-top-width:1px;
+        border-right-width:1px;
+        border-bottom-width:1px;
+        border-left-width:1px;
+        border-top-style:solid;
+        border-right-style:solid;
+        border-bottom-style:solid;
+        border-left-style:solid;
+        background-image:none;
+        background-attachment:scroll;
+        background-repeat:repeat;
+        background-position-x:0%;
+        background-position-y:0%;
+        background-size:auto;
+        background-origin:padding-box;
+        background-clip:padding-box;
+        background-color:none;
+    }
+    button:nth-of-type(n+1):hover{
+        background-color:#f47c20
+    }
+    
+</style>
+</html> 
