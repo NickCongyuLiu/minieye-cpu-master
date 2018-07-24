@@ -59,7 +59,7 @@ class ChatHandler(WebSocketHandler):
                     meta_data = line.split('lane.alg_fps')[1].strip()
                     meta_data_arr = meta_data.split(' ')
                     try:
-                        if(float(meta_data_arr[1])>100 or int(meta_data_arr[0][0:13])<1000000000000 or int(meta_data_arr[0][0:13])==1531531713894):
+                        if(float(meta_data_arr[1])>100 or int(meta_data_arr[0][0:13])<1000000000000 or int(meta_data_arr[0][0:13]==1531531713689)):
                             continue
                         else:
                             data_set.append([int(meta_data_arr[0][0:13]),float(meta_data_arr[1]),'lane_alg_fps'])
@@ -81,7 +81,7 @@ class ChatHandler(WebSocketHandler):
                     meta_data = line.split('vehicle.alg_fps')[1].strip()
                     meta_data_arr = meta_data.split(' ')
                     try:
-                        if(float(meta_data_arr[1])>100 or int(meta_data_arr[0][0:13])<1000000000000 or int(meta_data_arr[0][0:13])>1800000000000):
+                        if(float(meta_data_arr[1])>100 or int(meta_data_arr[0][0:13])<1000000000000):
                             continue
                         else:
                             data_set.append([int(meta_data_arr[0][0:13]),float(meta_data_arr[1]),'vehicle_alg_fps'])

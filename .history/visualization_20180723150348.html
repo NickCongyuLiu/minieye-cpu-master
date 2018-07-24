@@ -49,7 +49,6 @@
             mult_index = Number(evt.data.slice(4,6));
             var data_set = evt.data.slice(6,evt.data.length);
             data_set = JSON.parse(data_set);
-            console.log(data_set);
             drawEcharts(data_set);
             
             if(mult_index>=1){

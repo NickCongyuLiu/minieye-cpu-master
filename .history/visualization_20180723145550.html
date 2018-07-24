@@ -49,7 +49,6 @@
             mult_index = Number(evt.data.slice(4,6));
             var data_set = evt.data.slice(6,evt.data.length);
             data_set = JSON.parse(data_set);
-            console.log(data_set);
             drawEcharts(data_set);
             
             if(mult_index>=1){
@@ -213,6 +212,8 @@
 
     function drawEcharts(data_set){
 
+        var time_info = document.getElementById("time_info");
+        time_info.innerText='time info is '+data_set[0][0]+' --- '+data_set[data_set.length-1][0];
         // // 根据时间排序
         // data_set.sort(function(a,b){
         //     return a[0]-b[0];
@@ -256,9 +257,7 @@
             ms = (date.getMilliseconds()<10 ? '0'+date.getMilliseconds():date.getMilliseconds());
             time.push(Y+M+D+h+m+s+ms);
         }
-        
-        var time_info = document.getElementById("time_info");
-        time_info.innerText='时间戳范围 '+time[0]+' --- '+time[time.length-1];
+
         
         var option = myChart.getOption();
         //设置横坐标纵坐标
@@ -400,10 +399,10 @@
         <button id="all-Unshow" onclick="all_unshow()">图例全不显示</button>
     </div>
     <br>
-    <button name="previous" value="上一副图片" id="previous_file" style="display:none; margin-left:3%;">上一副图片</button>
-    <button name="next" value="下一副图片" id="next_file" style="display:none;margin-left:3%;">下一副图片</button>
+    <button name="previous" value="上一副图片" id="previous_file" style="display:none">上一副图片</button>
+    <button name="next" value="下一副图片" id="next_file" style="display:none">下一副图片</button>
     <br>
-    <span id="time_info" style="font-weight:bold; font-size: 20px; margin-left:3%;margin-top:20px;"></span>
+    <span id="time_info"></span>
 
 </body>
 <style>
