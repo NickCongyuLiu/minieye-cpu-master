@@ -21,7 +21,7 @@
     var CPU_temp=[],CPU_one_frequency=[],CPU_two_frequency=[],CPU_power=[],timeStamp=[];
 
     function doConnect(){
-        websocket = new WebSocket('ws://127.0.0.1:1213/chat');
+        websocket = new WebSocket('ws://127.0.0.1:1213/data');
         websocket.onopen = function(evt) { onOpen(evt) };
         websocket.onclose = function(evt) { onClose(evt) };
         websocket.onmessage = function(evt) { onMessage(evt) };

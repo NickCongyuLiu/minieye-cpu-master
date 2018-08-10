@@ -131,7 +131,7 @@ class ChatHandler(WebSocketHandler):
 if __name__ == '__main__':
     tornado.options.parse_command_line()
     app = tornado.web.Application([
-            (r"/chat", ChatHandler)],
+            (r"/data", ChatHandler)],
         static_path = os.path.join(os.path.dirname(__file__), "static"),
         template_path = os.path.join(os.path.dirname(__file__), "template"),
         debug = True
